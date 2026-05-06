@@ -57,4 +57,8 @@ Configuração especializada para **SQLite**. A escolha do banco local permite q
 ## 👨‍💻 Contato
 
 * **LinkedIn:** [Christian Wendel] www.linkedin.com/in/christian-wendel-6bb79836a
+<<<<<<< HEAD
+=======
+* 
+>>>>>>> 4607177a26f0095cd8384cd7284fd88e40f5da5e
 

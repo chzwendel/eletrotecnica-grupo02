@@ -35,13 +35,6 @@ export class SensorRepository {
     return db.prepare(sql).all(tipo) as Sensor[];
   }
 
-  atualizarValor(id: number, novoValor: string): boolean {
-    const resultado = db
-      .prepare("UPDATE sensor SET valor = ? WHERE id = ?")
-      .run(novoValor, id);
-    return resultado.changes > 0;
-  }
-
   atualizarStatus(id: number, novoStatus: 'ativo' | 'inativo'): boolean {
     const resultado = db
       .prepare("UPDATE sensor SET status = ? WHERE id = ?")
