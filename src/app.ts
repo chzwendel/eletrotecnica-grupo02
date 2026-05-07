@@ -1,7 +1,9 @@
 import express from "express";
+import { AmbienteRepository } from "./repositories/AmbienteRepository";
 
 export const app = express();
 
+Con()
 app.use(express.json());
 
 app.listen(3000, () => {

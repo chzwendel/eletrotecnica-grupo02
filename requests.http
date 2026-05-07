@@ -1,0 +1,88 @@
+### SENSORES
+POST http://localhost:3000/sensors
+Content-Type: application/json
+
+{
+  "nome": "Sensor de Temperatura",
+  "tipo": "Temperatura",
+  "status": "ativo",
+  "valor": 24.5
+}
+
+###
+GET http://localhost:3000/sensors
+
+###
+GET http://localhost:3000/sensors?tipo=Temperatura
+
+###
+GET http://localhost:3000/sensors/1
+
+###
+PATCH http://localhost:3000/sensors/1/status
+Content-Type: application/json
+
+{
+  "status": "inativo"
+}
+
+###
+DELETE http://localhost:3000/sensors/1
+
+
+### HISTÓRICO
+POST http://localhost:3000/historico
+Content-Type: application/json
+
+{
+  "sensor_id": 1,
+  "valor": 28.2,
+  "descricao": "Alerta de calor",
+  "numero_tel": "11999998888",
+  "data_evento": "2024-05-20T10:00:00Z"
+}
+
+###
+GET http://localhost:3000/historico
+
+###
+GET http://localhost:3000/historico?sensor_id=1
+
+###
+DELETE http://localhost:3000/historico/limpar
+Content-Type: application/json
+
+{
+  "dataLimite": "2024-01-01"
+}
+
+
+### AMBIENTE
+POST http://localhost:3000/ambiente
+Content-Type: application/json
+
+{
+  "estado": "alerta",
+  "ventilacao": "ligado",
+  "valvula_gas": "fechado",
+  "tomadas": "desligado"
+}
+
+###
+GET http://localhost:3000/ambiente/atual
+
+###
+GET http://localhost:3000/ambiente/historico
+
+###
+PUT http://localhost:3000/ambiente/1/atuadores
+Content-Type: application/json
+
+{
+  "ventilacao": "desligado",
+  "valvula_gas": "aberto",
+  "tomadas": "ligado"
+}
+
+###
+DELETE http://localhost:3000/ambiente/1

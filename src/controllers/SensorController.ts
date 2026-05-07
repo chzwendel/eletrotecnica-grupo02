@@ -5,8 +5,7 @@ import { Sensor } from "../models/Sensor";
 const repo = new SensorRepository();
 
 export class SensorController {
-  
-  criar(req: Request, res: Response) {
+  criar(req: Request, res: Response){
     try {
       const { nome, tipo, status, valor } = req.body;
       const novoSensor: Sensor = { nome, tipo, status, valor };
